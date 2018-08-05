@@ -42,7 +42,7 @@ body {
   padding-left: 0px;
 }
 
-#sidebar .menu-item button {
+#sidebar .menu-item a {
   transition: all 0.2s ease-out;
   padding-left: 15px;
   color: #c8c8c8;
@@ -54,12 +54,12 @@ body {
   outline: inherit;
 }
 
-#sidebar .menu-item button:hover {
+#sidebar .menu-item a:hover {
   color: white;
 }
 
 #sidebar .menu-item.active,
-#sidebar .menu-item button:hover {
+#sidebar .menu-item a:hover {
   border-left: 3px solid #800c0c;
   text-decoration: underline;
 }
