@@ -27,7 +27,7 @@ class App extends Component {
       .then(res => res.data)
       .then(authors =>
         this.setState({
-          authors,
+          authors: authors,
           loading: false
         })
       )

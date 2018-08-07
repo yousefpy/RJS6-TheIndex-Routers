@@ -34,7 +34,7 @@ class AuthorDetail extends Component {
     instance
       .get(`/api/authors/${authorID}`)
       .then(res => res.data)
-      .then(author => this.setState({ author, loading: false }))
+      .then(author => this.setState({ author: author, loading: false }))
       .catch(err => console.error(err));
   }
 
