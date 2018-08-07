@@ -58,7 +58,7 @@ body {
   color: white;
 }
 
-#sidebar .menu-item.active,
+#sidebar .menu-item a.active,
 #sidebar .menu-item a:hover {
   border-left: 3px solid #800c0c;
   text-decoration: underline;
