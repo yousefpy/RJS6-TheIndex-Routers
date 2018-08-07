@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 
 // Components
-import BookRow from "./BookRow";
+import BookTable from "./BookTable";
 import Loading from "./Loading";
 
 const instance = axios.create({
@@ -43,10 +43,6 @@ class AuthorDetail extends Component {
       return <Loading />;
     } else {
       const author = this.state.author;
-      const bookRows = author.books.map(book => (
-        <BookRow key={book.title} book={book} />
-      ));
-
       return (
         <div className="author">
           <div>
@@ -57,16 +53,7 @@ class AuthorDetail extends Component {
               alt={author.first_name + " " + author.last_name}
             />
           </div>
-          <table className="mt-3 table">
-            <thead>
-              <tr>
-                <th>Name</th>
-                <th>Authors</th>
-                <th>Color</th>
-              </tr>
-            </thead>
-            <tbody>{bookRows}</tbody>
-          </table>
+          <BookTable books={author.books} />
         </div>
       );
     }
