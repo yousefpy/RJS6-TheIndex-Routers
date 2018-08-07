@@ -12,7 +12,7 @@ class SearchBar extends Component {
 
   handleChange(event) {
     this.setState({ query: event.target.value });
-    this.props.filterAuthors(event.target.value);
+    this.props.handleChange(event.target.value);
   }
 
   render() {
