@@ -21,10 +21,12 @@ class App extends Component {
     };
   }
 
+  fetchAllAuthors() {
+    return instance.get("/api/authors/").then(res => res.data);
+  }
+
   componentDidMount() {
-    instance
-      .get("/api/authors/")
-      .then(res => res.data)
+    this.fetchAllAuthors()
       .then(authors =>
         this.setState({
           authors: authors,
