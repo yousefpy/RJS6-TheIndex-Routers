@@ -60,7 +60,7 @@ class App extends Component {
       <div id="app" className="container-fluid">
         <div className="row">
           <div className="col-2">
-            <Sidebar unselectAuthor={this.unselectAuthor} />
+            <Sidebar />
           </div>
           <div className="content col-10">{this.getView()}</div>
         </div>
