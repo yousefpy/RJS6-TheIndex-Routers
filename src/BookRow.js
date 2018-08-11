@@ -6,7 +6,11 @@ class BookRow extends Component {
     return (
       <tr>
         <td>{book.title}</td>
-        <td>{book.authors.map(author => author.name).join(", ")}</td>
+        <td>
+          {book.authors.map(author => (
+            <div key={author.name}>{author.name}</div>
+          ))}
+        </td>
         <td>
           <button className="btn" style={{ backgroundColor: book.color }} />
         </td>
