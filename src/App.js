@@ -42,7 +42,7 @@ class App extends Component {
     } else {
       return (
         <Switch>
-          <Route exact path="/" render={() => <Redirect to="/authors" />} />
+          <Redirect exact from="/" to="/authors" />
           <Route path="/authors/:authorID" component={AuthorDetail} />
           <Route
             path="/authors/"
